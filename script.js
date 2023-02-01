@@ -5,7 +5,7 @@ const choices = ["Rock" , "Paper" , "Scissors"];
 let button = document.querySelector(".btn");
 
 button.addEventListener('click',getComputerChoiceAndPlayerChoice)
-button.addEventListener('click', playRound)
+button.addEventListener('click' ,Game)
 
 
 function getComputerChoiceAndPlayerChoice(){
@@ -33,6 +33,12 @@ function playRound(computerSelection, playerChoice){
         console.log("Player wins")
     }
 }
+function Game(){
+    for(let i = 0; i < 5; i++){
+        getComputerChoiceAndPlayerChoice()
 
+    }
+
+}
    
 });
