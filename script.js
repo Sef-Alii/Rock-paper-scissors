@@ -10,9 +10,9 @@ button.addEventListener('click' ,Game)
 
 function getComputerChoiceAndPlayerChoice(){
    let computerSelection = choices[Math.floor(Math.random() * choices.length)];
-    console.log("Computer chose " + computerSelection);
     let playerChoice = prompt();
     console.log("Player chose " + playerChoice)
+    console.log("Computer chose " + computerSelection);
    playRound(computerSelection, playerChoice)
 }
 
