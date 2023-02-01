@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () =>{
 
 
-const choices = ["Rock" , "Paper" , "Scissors"];
+const choices = ["rock" , "paper" , "scissors"];
 let button = document.querySelector(".btn");
 
 button.addEventListener('click',getComputerChoiceAndPlayerChoice)
@@ -10,7 +10,7 @@ button.addEventListener('click' ,Game)
 
 function getComputerChoiceAndPlayerChoice(){
    let computerSelection = choices[Math.floor(Math.random() * choices.length)];
-    let playerChoice = prompt();
+    let playerChoice = prompt().toLowerCase();
     console.log("Player chose " + playerChoice)
     console.log("Computer chose " + computerSelection);
    playRound(computerSelection, playerChoice)
@@ -19,17 +19,17 @@ function getComputerChoiceAndPlayerChoice(){
 function playRound(computerSelection, playerChoice){
     if(playerChoice === computerSelection){
         console.log("its a draw");
-    } else if(playerChoice === "Rock" && computerSelection === "Scissors"){
+    } else if(playerChoice === "rock" && computerSelection === "scissors"){
         console.log("Player wins")
-    }else if(playerChoice === "Rock" && computerSelection === "Paper"){
+    }else if(playerChoice === "rock" && computerSelection === "paper"){
         console.log("Computer wins")
-    }else if(playerChoice === "Paper" && computerSelection === "Scissors"){
+    }else if(playerChoice === "paper" && computerSelection === "scissors"){
         console.log("Computer wins")
-    }else if(playerChoice === "Paper" && computerSelection === "Rock"){
+    }else if(playerChoice === "paper" && computerSelection === "rock"){
         console.log("Player wins")
-    }else if(playerChoice === "Scissors" && computerSelection === "Rock"){
+    }else if(playerChoice === "scissors" && computerSelection === "rock"){
         console.log("Computer wins")
-    }else if(playerChoice === "Scissors" && computerSelection === "Paper"){
+    }else if(playerChoice === "scissors" && computerSelection === "paper"){
         console.log("Player wins")
     }
 }
